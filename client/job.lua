@@ -52,7 +52,7 @@ function OpenMobileAmbulanceActionsMenu()
 
 				local closestPlayer, closestDistance = ESX.Game.GetClosestPlayer()
 
-				if closestPlayer == -1 or closestDistance > 1.0 then
+				if closestPlayer == -1 or closestDistance > 2.0 then
 					ESX.ShowNotification(_U('no_players'))
 				else
 					if data.current.value == 'revive' then
