@@ -517,6 +517,11 @@ AddEventHandler('esx_ambulancejob:setDeadPlayers', function(_deadPlayers)
 				EndTextCommandSetBlipName(blip)
 
 				deadPlayerBlips[playerId] = blip
+
+				for playerId,v in pairs(deadPlayerBlips) do
+					RemoveBlip(v)
+					deadPlayerBlips[playerId] = nil
+				end
 			end
 		end
 	end
